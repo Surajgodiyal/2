@@ -41,5 +41,78 @@
         <h1>Welcome to My Website</h1>
         <p>Explore high-quality backgrounds and elegant designs</p>
     </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+    <style>
+        /* Basic styling for the pages */
+        .page {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Page with Game Options -->
+    <div id="mainPage" class="page active">
+        <h1>Select a Game</h1>
+        <button class="button" onclick="showPage('game1')">Game 1</button>
+        <button class="button" onclick="showPage('game2')">Game 2</button>
+        <button class="button" onclick="showPage('game3')">Game 3</button>
+        <button class="button" onclick="showPage('game4')">Game 4</button>
+    </div>
+
+    <!-- Game 1 Page -->
+    <div id="game1" class="page">
+        <h1>Game 1</h1>
+        <p>Welcome to Game 1! [Game content goes here]</p>
+        <button class="button" onclick="showPage('mainPage')">Back to Main Page</button>
+    </div>
+
+    <!-- Game 2 Page -->
+    <div id="game2" class="page">
+        <h1>Game 2</h1>
+        <p>Welcome to Game 2! [Game content goes here]</p>
+        <button class="button" onclick="showPage('mainPage')">Back to Main Page</button>
+    </div>
+
+    <!-- Game 3 Page -->
+    <div id="game3" class="page">
+        <h1>Game 3</h1>
+        <p>Welcome to Game 3! [Game content goes here]</p>
+        <button class="button" onclick="showPage('mainPage')">Back to Main Page</button>
+    </div>
+
+    <!-- Game 4 Page -->
+    <div id="game4" class="page">
+        <h1>Game 4</h1>
+        <p>Welcome to Game 4! [Game content goes here]</p>
+        <button class="button" onclick="showPage('mainPage')">Back to Main Page</button>
+    </div>
+
+    <script>
+        // Function to show the selected page and hide others
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
 </body>
+</html>
 </html>
